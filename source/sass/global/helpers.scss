@@ -1,0 +1,13 @@
+// Класс-хелпер для доступного скрытия элементов на странице
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.pixel-perfect-image {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}

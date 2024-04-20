@@ -2,3 +2,26 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
+// GLOBAL
+// ---------------------------------
+@import "global/variables";
+@import "global/global";
+@import "global/fonts";
+@import "global/helpers";
+@import "global/container";
+
+// BLOCKS
+// ---------------------------------
+@import "blocks/page-header";
+@import "blocks/navigation";
+@import "blocks/hero";
+@import "blocks/tours";
+@import "blocks/training";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/adv";
+@import "blocks/gallery";
+@import "blocks/form";
+@import "blocks/page-footer";
+@import "blocks/swiper-custom";

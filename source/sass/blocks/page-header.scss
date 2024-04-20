@@ -1,0 +1,47 @@
+.page-header {
+  background-color: var(--primary-accent);
+  color: var(--base-white);
+  position: relative;
+}
+
+.page-header__wrapper {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  justify-items: end;
+  gap: 10px 0;
+  padding-block: 15px;
+  padding-block-end: 10px;
+}
+
+.page-header__toggle {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  &--closed {
+    background-image: url("../img/sprite/burger-icon.svg");
+  }
+}
+
+.page-header__logo {
+}
+
+.page-header__nav {
+}
+
+.page-header__telephone {
+  grid-column: 2 / span 1;
+}
+
+.page-header__telephone-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+}
