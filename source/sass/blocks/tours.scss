@@ -1,0 +1,232 @@
+@use "../global/mixins" as mixin;
+
+.tours {
+  padding-block: 36px 20px;
+}
+
+.tours__heading {
+  margin: 0;
+  margin-block-end: 42px;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  position: relative;
+
+  &::before {
+    content: attr(data-content);
+    position: absolute;
+    font-size: 26px;
+    line-height: 26px;
+    color: inherit;
+    opacity: 0.03;
+    top: -16px;
+  }
+}
+
+.tours__slider {
+  margin-block-end: 25px;
+}
+
+.tours__slides {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tours__slide {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  min-height: 416px;
+  padding-block: 30px;
+  padding-inline: 20px;
+  position: relative;
+  color: var(--base-white);
+  visibility: hidden;
+
+  &--active {
+    visibility: visible;
+  }
+}
+
+.tours__picture {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-accent);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.tours__details {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.tours__header {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+.tours__place {
+  padding-block: 8px;
+  padding-inline: 34px 12px;
+  background-color: var(--primary-accent);
+  background-image: url("../img/sprite/pin-fill.svg");
+  background-repeat: no-repeat;
+  background-position: 12px center;
+}
+
+.tours__duration {
+  display: flex;
+  column-gap: 14px;
+}
+
+.tours__days,
+.tours__nights {
+  padding-block: 4px;
+  padding-inline-start: 32px;
+}
+
+.tours__days {
+  background-image: url("../img/sprite/sun.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.tours__nights {
+  background-image: url("../img/sprite/moon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
+.tours__subheading {
+  margin: 0;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+}
+
+.tours__footer {
+  display: flex;
+  column-gap: 8px;
+  padding-block-start: 15px;
+  position: relative;
+
+  &::before {
+    @include mixin.pseudo(80px, 1px, var(--base-white));
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+  }
+}
+
+.tours__complexity {
+  min-height: 32px;
+  width: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.tours__stars {
+  display: flex;
+}
+
+.tours__date {
+  min-height: 32px;
+  width: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.tours__when {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+}
+
+.tours__group {
+  min-height: 32px;
+  width: 70px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tours__max-number {
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+}
+
+.tours__link {
+  width: fit-content;
+  display: block;
+  margin-inline: auto;
+  padding-block: 10px;
+  padding-inline: 10px 28px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 4%;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s;
+
+  &::after {
+    @include mixin.pseudo(6px, 12px, var(--base-gray));
+    right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+    mask: url("../img/sprite/arrow-small.svg") no-repeat center;
+  }
+
+  &:hover {
+    color: rgba(2, 102, 193, 0.1);
+
+    &::after {
+      background-color: rgba(2, 102, 193, 0.1);
+    }
+  }
+
+  &:focus {
+    color: var(--primary-accent);
+    outline: none;
+
+    &::after {
+      background-color: var(--primary-accent);
+    }
+  }
+
+  &:active {
+    color: var(--dark-blue);
+
+    &::after {
+      background-color: var(--dark-blue);
+    }
+  }
+
+  &:disabled,
+  &:not([href]) {
+    color: var(--disabled-gray);
+
+    &::after {
+      background-color: var(--disabled-gray);
+    }
+  }
+}

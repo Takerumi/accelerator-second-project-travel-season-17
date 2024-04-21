@@ -55,7 +55,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Организация туристических походов в горы.</h1>
       <section class="hero" data-test="hero">
-        <div class="hero__slider swiper">
+        <div class="hero__slider swiper swiper--hero">
           <ul class="hero__slides swiper-wrapper">
             <li class="hero__slide swiper-slide">
               <div class="hero__container container">
@@ -113,7 +113,220 @@
           </button>
         </div>
       </section>
-      <section class="tours" data-test="tours"></section>
+      <section class="tours" data-test="tours">
+        <div class="container">
+          <h2 class="tours__heading" data-content="Ближайшие туры">Ближайшие туры</h2>
+          <div class="tours__slider swiper swiper--tours">
+            <ul class="tours__slides swiper-wrapper">
+              <li class="tours__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/tours/elbrus-desktop@1x.webp, iimg/tours/elbrus-desktop@2x.webp 2x">
+                  <source type="image/jpeg" media="(min-width: 1200px)" srcset="img/tours/elbrus-desktop@1x.jpg, img/tours/elbrus-desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tours/elbrus-tablet@1x.webp, img/tours/elbrus-tablet@2x.webp 2x">
+                  <source type="image/jpeg" media="(min-width: 768px)" srcset="img/tours/elbrus-tablet@1x.jpg, iimg/tours/elbrus-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/tours/elbrus-mobile@1x.webp, img/tours/elbrus-mobile@2x.webp 2x">
+                  <img class="tours__picture" src="img/tours/elbrus-mobile@1x.jpg" srcset="img/tours/elbrus-mobile@2x.jpg 2x" width="290" height="416" alt="Живописный пейзаж холмов, долин и заснеженных вершин Кавказских гор, блестящих под ясным голубым небом.">
+                </picture>
+                <div class="tours__details">
+                  <div class="tours__header">
+                    <span class="tours__place">Кавказ</span>
+                    <div class="tours__duration">
+                      <span class="tours__days">4 дня</span>
+                      <span class="tours__nights">3 ночи</span>
+                    </div>
+                  </div>
+                  <h3 class="tours__subheading">Путешествие вокруг Эльбруса</h3>
+                  <div class="tours__footer">
+                    <p class="tours__complexity">
+                      Сложность:
+                      <span class="visually-hidden">4 из 5.</span>
+                      <span class="tours__stars">
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-stroke"></use>
+                        </svg>
+                      </span>
+                    </p>
+                    <p class="tours__date">
+                      Даты набора:
+                      <span class="tours__when">12.06–19.06</span>
+                    </p>
+                    <p class="tours__group">
+                      Группа:
+                      <span class="tours__max-number">до 15 чел.</span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="tours__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/tours/beluga-desktop@1x.webp, iimg/tours/beluga-desktop@2x.webp 2x">
+                  <source type="image/jpeg" media="(min-width: 1200px)" srcset="img/tours/beluga-desktop@1x.jpg, img/tours/beluga-desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tours/beluga-tablet@1x.webp, img/tours/beluga-tablet@2x.webp 2x">
+                  <source type="image/jpeg" media="(min-width: 768px)" srcset="img/tours/beluga-tablet@1x.jpg, iimg/tours/beluga-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/tours/beluga-mobile@1x.webp, img/tours/beluga-mobile@2x.webp 2x">
+                  <img class="tours__picture" src="img/tours/beluga-mobile@1x.jpg" srcset="img/tours/beluga-mobile@2x.jpg 2x" width="290" height="416" alt="Завораживающий пейзаж подножия горы Белухи, где сливаются ледники, бурные реки и альпийские луга.">
+                </picture>
+                <div class="tours__details">
+                  <div class="tours__header">
+                    <span class="tours__place">Алтай</span>
+                    <div class="tours__duration">
+                      <span class="tours__days">14 дней</span>
+                      <span class="tours__nights">13 ночей</span>
+                    </div>
+                  </div>
+                  <h3 class="tours__subheading">Путь к подножию Белухи</h3>
+                  <div class="tours__footer">
+                    <p class="tours__complexity">
+                      Сложность:
+                      <span class="visually-hidden">4 из 5.</span>
+                      <span class="tours__stars">
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-stroke"></use>
+                        </svg>
+                      </span>
+                    </p>
+                    <p class="tours__date">
+                      Даты набора:
+                      <span class="tours__when">14.06–23.06</span>
+                    </p>
+                    <p class="tours__group">
+                      Группа:
+                      <span class="tours__max-number">до 25 чел.</span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="tours__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/tours/fisht-desktop@1x.webp, iimg/tours/fisht-desktop@2x.webp 2x">
+                  <source type="image/jpeg" media="(min-width: 1200px)" srcset="img/tours/fisht-desktop@1x.jpg, img/tours/fisht-desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tours/fisht-tablet@1x.webp, img/tours/fisht-tablet@2x.webp 2x">
+                  <source type="image/jpeg" media="(min-width: 768px)" srcset="img/tours/fisht-tablet@1x.jpg, iimg/tours/fisht-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/tours/fisht-mobile@1x.webp, img/tours/fisht-mobile@2x.webp 2x">
+                  <img class="tours__picture" src="img/tours/fisht-mobile@1x.jpg" srcset="img/tours/fisht-mobile@2x.jpg 2x" width="290" height="416" alt="Гора Фишт, один из символов Кавказа, предстает во всей своей красе, окруженная зелеными долинами и лазурным небом.">
+                </picture>
+                <div class="tours__details">
+                  <div class="tours__header">
+                    <span class="tours__place">Адыгея</span>
+                    <div class="tours__duration">
+                      <span class="tours__days">7 дней</span>
+                      <span class="tours__nights">6 ночей/span>
+                    </div>
+                  </div>
+                  <h3 class="tours__subheading">Через Фишт к Чёрному морю и обратно</h3>
+                  <div class="tours__footer">
+                    <p class="tours__complexity">
+                      Сложность:
+                      <span class="visually-hidden">4 из 5.</span>
+                      <span class="tours__stars">
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-stroke"></use>
+                        </svg>
+                      </span>
+                    </p>
+                    <p class="tours__date">
+                      Даты набора:
+                      <span class="tours__when">15.07–19.07</span>
+                    </p>
+                    <p class="tours__group">
+                      Группа:
+                      <span class="tours__max-number">до 22 чел.</span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="tours__slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/tours/manarag-desktop@1x.webp, iimg/tours/manarag-desktop@2x.webp 2x">
+                  <source type="image/jpeg" media="(min-width: 1200px)" srcset="img/tours/manarag-desktop@1x.jpg, img/tours/manarag-desktop@2x.jpg 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/tours/manarag-tablet@1x.webp, img/tours/manarag-tablet@2x.webp 2x">
+                  <source type="image/jpeg" media="(min-width: 768px)" srcset="img/tours/manarag-tablet@1x.jpg, iimg/tours/manarag-tablet@2x.jpg 2x">
+                  <source type="image/webp" srcset="img/tours/manarag-mobile@1x.webp, img/tours/manarag-mobile@2x.webp 2x">
+                  <img class="tours__picture" src="img/tours/manarag-mobile@1x.jpg" srcset="img/tours/manarag-mobile@2x.jpg 2x" width="290" height="416" alt="Заснеженный пик горы Манарага возвышается над облаками, создавая захватывающий вид на Кавказские горы.">
+                </picture>
+                <div class="tours__details">
+                  <div class="tours__header">
+                    <span class="tours__place">Урал</span>
+                    <div class="tours__duration">
+                      <span class="tours__days">9 дней</span>
+                      <span class="tours__nights">10 ночей</span>
+                    </div>
+                  </div>
+                  <h3 class="tours__subheading">Восхождение Манарага</h3>
+                  <div class="tours__footer">
+                    <p class="tours__complexity">
+                      Сложность:
+                      <span class="visually-hidden">4 из 5.</span>
+                      <span class="tours__stars">
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                        <svg width="15" height="14">
+                          <use href="/__spritemap#sprite-star-fill"></use>
+                        </svg>
+                      </span>
+                    </p>
+                    <p class="tours__date">
+                      Даты набора:
+                      <span class="tours__when">12.07–19.07</span>
+                    </p>
+                    <p class="tours__group">
+                      Группа:
+                      <span class="tours__max-number">до 7 чел.</span>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <a class="tours__link" href="#">Показать все туры</a>
+        </div>
+      </section>
       <section class="training" data-test="training"></section>
       <section class="about" data-test="about"></section>
       <section class="reviews" data-test="about"></section>

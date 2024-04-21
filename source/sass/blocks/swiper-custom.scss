@@ -1,6 +1,13 @@
 .swiper {
-  width: 320px;
-  height: 568px;
+  &--hero {
+    width: 320px;
+    height: 568px;
+  }
+
+  &--tours {
+    width: 290px;
+    height: 416px;
+  }
 }
 
 .swiper-wrapper {

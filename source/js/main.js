@@ -2,4 +2,4 @@
 // import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
-import { heroSwiper } from './slider.js';
+import { heroSwiper, toursSwiper } from './slider.js';

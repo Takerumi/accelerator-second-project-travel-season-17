@@ -7,6 +7,7 @@ const heroSwiper = new Swiper('.hero__slider', {
   loop: true,
   slidesPerView: 1,
   watchSlidesProgress: true,
+  slideVisibleClass: 'hero__slide--active',
   spaceBetween: 0,
   keyboard: {
     enabled: true,
@@ -29,4 +30,20 @@ const heroSwiper = new Swiper('.hero__slider', {
   }
 });
 
-export { heroSwiper };
+const toursSwiper = new Swiper('.tours__slider', {
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 1,
+  watchSlidesProgress: true,
+  slideVisibleClass: 'tours__slide--active',
+  spaceBetween: 0,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  modules: [Navigation],
+  navigation: {
+  },
+});
+
+export { heroSwiper, toursSwiper };
