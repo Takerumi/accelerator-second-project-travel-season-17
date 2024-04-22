@@ -46,4 +46,34 @@ const toursSwiper = new Swiper('.tours__slider', {
   },
 });
 
-export { heroSwiper, toursSwiper };
+const instructorsSwiper = new Swiper('.instructors__slider', {
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 1,
+  watchSlidesProgress: true,
+  slideVisibleClass: 'instructors__slide--active',
+  spaceBetween: 0,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  modules: [Navigation],
+  navigation: {
+  },
+});
+
+export { heroSwiper, toursSwiper, instructorsSwiper };

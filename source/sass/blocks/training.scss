@@ -1,0 +1,36 @@
+@use "../global/mixins" as mixin;
+
+.training {
+  padding-block: 36px 20px;
+}
+
+.training__heading {
+  margin: 0;
+  margin-block-end: 35px;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  position: relative;
+
+  &::before {
+    content: attr(data-content);
+    position: absolute;
+    font-size: 26px;
+    line-height: 26px;
+    color: inherit;
+    opacity: 0.03;
+    top: -16px;
+  }
+}
+
+.training__description {
+  margin: 0;
+  margin-block-end: 25px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.training__instructors {
+}
+
