@@ -4,25 +4,6 @@
   padding-block: 36px 20px;
 }
 
-.training__heading {
-  margin: 0;
-  margin-block-end: 35px;
-  font-size: 22px;
-  line-height: 22px;
-  font-weight: 800;
-  position: relative;
-
-  &::before {
-    content: attr(data-content);
-    position: absolute;
-    font-size: 26px;
-    line-height: 26px;
-    color: inherit;
-    opacity: 0.03;
-    top: -16px;
-  }
-}
-
 .training__description {
   margin: 0;
   margin-block-end: 25px;
@@ -31,6 +12,52 @@
   font-weight: 400;
 }
 
-.training__instructors {
+
+.training__subheading {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  margin-block-end: 25px;
+}
+
+.training__activity-list {
+  display: grid;
+  gap: 25px 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-inline-start: 29px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 2px;
+    background-color: var(--primary-accent);
+    position: absolute;
+    left: 7px;
+    top: 18px;
+    bottom: 18px;
+  }
+}
+
+.training__activity-item {
+  padding-inline-start: 34px;
+  position: relative;
+
+  &::before {
+    @include mixin.pseudo(14px, 14px, var(--primary-accent));
+    border-radius: 50%;
+    left: -28px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.training__activity-descr {
+  max-width: 200px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
