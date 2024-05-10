@@ -1,0 +1,111 @@
+@use "../global/mixins" as mixin;
+
+.form {
+  min-height: 638px;
+  padding-block: 174px 40px;
+  background-color: #2A3022;
+  color: var(--base-white);
+  text-align: center;
+  background-image: image-set(
+    url("../img/form/form-bg-tablet@1x.webp") type("image/webp") 1x,
+    url("../img/form/form-bg-tablet@2x.webp") type("image/webp") 2x,
+    url("../img/form/form-bg-tablet@1x.jpg") type("image/jpg") 1x,
+    url("../img/form/form-bg-tablet@2x.jpg") type("image/jpg") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include mixin.tablet {
+    padding-block: 184px 40px;
+  }
+}
+
+.form__container {
+  display: grid;
+  row-gap: 20px;
+  justify-items: center;
+  padding-inline: 31px;
+
+  @include mixin.tablet {
+    row-gap: 24px;
+  }
+}
+
+.form h2 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+
+  @include mixin.tablet {
+    font-size: 25px;
+    line-height: 25px;
+    margin-block-end: 5px;
+  }
+}
+
+.form p {
+  width: 85%;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+
+  @include mixin.tablet {
+    width: 300px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.form__form {
+  display: grid;
+  row-gap: 8px;
+}
+
+.form__input {
+  height: 50px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  background-color: var(--base-white);
+  color: var(--base-gray);
+  padding-block: 17px;
+  padding-inline: 15px;
+  border: 1px solid var(--opacity-blue);
+
+  @include mixin.tablet {
+    width: 360px;
+    height: 56px;
+    padding-block: 20px;
+    padding-inline: 30px;
+  }
+
+  &:hover {
+    border: 1px solid var(--primary-accent);
+  }
+
+  &:focus {
+    border: 1px solid var(--base-gray);
+    outline: none;
+  }
+
+  &:disabled {
+    border: 1px solid var(--disabled-gray);
+    color: var(--disabled-gray);
+  }
+
+  &--error {
+    border: 1px solid var(--error-red);
+  }
+}
+
+.form__button {
+  padding-block: 21px;
+
+  @include mixin.tablet {
+    border-radius: 6px;
+  }
+}

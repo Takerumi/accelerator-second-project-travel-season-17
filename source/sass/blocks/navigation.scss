@@ -1,3 +1,5 @@
+@use "../global/mixins" as mixin;
+
 .navigation {
   width: 100%;
   padding-block: 20px 50px;
@@ -6,14 +8,26 @@
   position: absolute;
   left: 0;
 
+  @include mixin.tablet {
+    padding-block: 30px 70px;
+  }
+
   &--closed {
     z-index: -1;
-    top: -200%;
+    top: -290%;
+
+    @include mixin.tablet {
+      top: -305%;
+    }
   }
 
   &--opened {
     z-index: 2;
     top: 100px;
+
+    @include mixin.tablet {
+      top: 85px;
+    }
   }
 }
 
@@ -24,16 +38,44 @@
   display: flex;
   flex-direction: column;
   row-gap: 22px;
+
+  @include mixin.tablet {
+    row-gap: 23px;
+  }
 }
 
 .navigation__link {
-  padding-inline-end: 20px;
-  padding-block: 5px;
+  padding-inline: 5px;
+  padding-block: 3px;
   font-size: 14px;
   line-height: 14px;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
+
+  @include mixin.tablet {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--base-white);
+  }
+
+  &:focus {
+    border: 1px solid var(--base-white);
+    outline: none;
+  }
+
+  &:active {
+    color: var(--dark-blue);
+    border: 1px solid transparent;
+  }
+
+  &:disabled,
+  &:not([href]) {
+    color: var(--disabled-gray);
+  }
 }

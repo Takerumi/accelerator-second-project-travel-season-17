@@ -2,11 +2,12 @@
 
 .container {
   width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
   margin-inline: auto;
   position: relative;
 
   @include mixin.mobile {
-    width: 320px;
     padding-inline: 15px;
   }
 
@@ -16,6 +17,5 @@
 
   @include mixin.desktop {
     padding-inline: 120px;
-    max-width: 1440px;
   }
 }

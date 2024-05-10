@@ -1,3 +1,5 @@
+@use "../global/mixins" as mixin;
+
 .hero__slides {
   list-style: none;
   margin: 0;
@@ -16,6 +18,11 @@
   text-align: center;
   visibility: hidden;
 
+  @include mixin.tablet {
+    min-height: 1034px;
+    padding-block: 100px;
+  }
+
   &--active {
     visibility: visible;
   }
@@ -27,6 +34,12 @@
   font-size: 26px;
   line-height: 26px;
   font-weight: 800;
+
+  @include mixin.tablet {
+    font-size: 56px;
+    line-height: 56px;
+    text-align: center;
+  }
 }
 
 .hero__description {
@@ -36,6 +49,14 @@
   margin-inline: auto;
   font-size: 15px;
   line-height: 20px;
+
+  @include mixin.tablet {
+    max-width: 500px;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    margin-block-end: 35px;
+  }
 }
 
 .hero__pagination {
@@ -56,6 +77,11 @@
   border: 1px solid var(--base-white);
   border-radius: 50%;
   cursor: pointer;
+
+  @include mixin.tablet {
+    width: 20px;
+    height: 20px;
+  }
 
   &:hover {
     background-color: var(--secondary-gray);
@@ -86,4 +112,10 @@
   position: absolute;
   top: 0;
   z-index: -1;
+
+  @include mixin.tablet {
+    width: 100%;
+    height: 1034px;
+    object-fit: cover;
+  }
 }

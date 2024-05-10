@@ -1,0 +1,83 @@
+@use "../global/mixins" as mixin;
+
+.gallery {
+  padding-block: 37px 3px;
+
+  @include mixin.tablet {
+    padding-block-start: 60px;
+  }
+}
+
+.gallery__container {
+  @include mixin.tablet {
+    position: relative;
+  }
+}
+
+.gallery__heading {
+  margin-block-end: 26px;
+
+  @include mixin.tablet {
+    margin-block-end: 30px;
+  }
+}
+
+.gallery__description {
+  margin: 0;
+  margin-block-end: 31px;
+  font-size: 12px;
+  line-height: 18px;
+
+  @include mixin.tablet {
+    max-width: 420px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-block-end: 21px;
+  }
+}
+
+.gallery__slider-nav {
+  bottom: 0;
+  right: 45px;
+}
+
+.gallery .gallery__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-gap: 5px;
+}
+
+.gallery .gallery__slide {
+  display: grid;
+  width: auto;
+  gap: 7px;
+  grid-template-rows: 134px 124px;
+
+  @include mixin.tablet {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    max-width: 253px;
+  }
+}
+
+.gallery__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery__slide:nth-child(2n-1) img {
+  @include mixin.tablet {
+    height: 418px;
+  }
+}
+
+.gallery__slide:nth-child(2n) img:nth-child(2n) {
+  @include mixin.tablet {
+    height: 205px;
+  }
+}

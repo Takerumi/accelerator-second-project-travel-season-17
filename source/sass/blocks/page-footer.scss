@@ -1,0 +1,153 @@
+@use "../global/mixins" as mixin;
+
+.page-footer {
+  padding-block-end: 20px;
+
+  @include mixin.tablet {
+    // background-image: url("/../bitmaps_reference/test-pp/footer_tablet.png");
+    // background-repeat: no-repeat;
+    // background-position: center top;
+    // background-size: 768px auto;
+  }
+}
+
+.page-footer__container {
+  @include mixin.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 34px;
+  }
+}
+
+.page-footer__links {
+  padding-block-start: 23px;
+  border-top: 1px solid #D5D7D9;
+
+  @include mixin.tablet {
+    padding-block-start: 34px;
+  }
+}
+
+.page-footer__logo {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  margin-block-end: 17px;
+
+  @include mixin.tablet {
+    margin: 0;
+  }
+}
+
+.page-footer__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.page-footer__links-list {
+  list-style: none;
+  margin: 0;
+  margin-block-end: 9px;
+  padding: 0;
+  column-count: 2;
+  column-width: 120px;
+  column-gap: 50px;
+  text-align: center;
+
+  @include mixin.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 20px;
+    align-items: center;
+    margin-inline-start: 42px;
+    margin-block-end: 0;
+  }
+}
+
+.page-footer__link-item {
+  margin-block-end: 11px;
+
+  @include mixin.tablet {
+    margin-block-end: 0;
+  }
+}
+
+.page-footer__link {
+  padding-inline: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid transparent;
+
+  @include mixin.tablet {
+    padding: 0;
+  }
+
+  &:hover {
+    border-bottom: 1px solid var(--base-gray);
+  }
+
+  &:focus {
+    border: 1px solid var(--base-gray);
+    outline: none;
+  }
+
+  &:active {
+    color: var(--primary-accent);
+    border: 1px solid transparent;
+  }
+
+  &:disabled,
+  &:not([href]) {
+    color: var(--disabled-gray);
+  }
+}
+
+.page-footer__socials {
+  margin-block-end: 23px;
+
+  @include mixin.tablet {
+    width: 100%;
+    margin-block-end: 0;
+  }
+}
+
+.page-footer__wrapper {
+  @include mixin.tablet {
+    width: 100%;
+  }
+}
+
+.page-footer__privacy-policy {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--opacity-blue);
+  }
+
+  &:focus {
+    color: var(--primary-accent);
+    outline: none;
+  }
+
+  &:active {
+    color: var(--dark-blue);
+  }
+
+  &:disabled,
+  &:not([href]) {
+    color: var(--disabled-gray);
+  }
+}

@@ -1,0 +1,113 @@
+@use "../global/mixins" as mixin;
+
+.reviews {
+  padding-block: 37px 20px;
+
+  @include mixin.tablet {
+    padding-block: 60px 40px;
+  }
+}
+
+.reviews__heading {
+  margin-block-end: 32px;
+
+  @include mixin.tablet {
+    margin-block-end: 35px;
+  }
+}
+
+.reviews .reviews__slider {
+  overflow: visible;
+}
+
+.reviews__slider-nav {
+  top: 0;
+  right: 45px;
+}
+
+.reviews__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews .reviews__slide {
+  width: 290px;
+  padding: 20px;
+  box-shadow: 0px 0px 20px 0px var(--shadow-gray);
+
+  @include mixin.tablet {
+    width: 565px;
+    min-height: 277px;
+    display: grid;
+    grid-template-columns: 186px 1fr;
+    column-gap: 30px;
+    row-gap: 22px;
+  }
+}
+
+.reviews picture {
+  @include mixin.tablet {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+}
+
+.reviews__picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-block-end: 18px;
+
+  @include mixin.tablet {
+    height: 100%;
+  }
+}
+
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-block-end: 16px;
+
+  @include mixin.tablet {
+    margin-block-start: 3px;
+    margin-block-end: 0;
+  }
+}
+
+.reviews__about-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.reviews__footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  @include mixin.tablet {
+    row-gap: 6px;
+  }
+}
+
+.reviews__author-name {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+
+  @include mixin.tablet {
+    font-size: 13px;
+   line-height: 13px;
+  }
+}
+
+.reviews__author-info {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+}

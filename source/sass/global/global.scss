@@ -7,7 +7,7 @@
 }
 
 html {
-  scrollbar-gutter: stable;
+  // scrollbar-gutter: stable;
 }
 
 body {
@@ -21,8 +21,9 @@ body {
   background-color: var(--base-white);
   color: var(--base-gray);
   position: relative;
-  scrollbar-gutter: stable;
+  // scrollbar-gutter: stable;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   text-rendering: optimizeLegibility;
 
   @include mixin.tablet {

@@ -1,4 +1,7 @@
+@use "../global/mixins" as mixin;
+
 .page-header {
+  min-width: 320px;
   background-color: var(--primary-accent);
   color: var(--base-white);
   position: relative;
@@ -9,8 +12,14 @@
   grid-template-columns: min-content 1fr;
   justify-items: end;
   gap: 10px 0;
-  padding-block: 15px;
-  padding-block-end: 10px;
+  padding-block: 15px 10px;
+
+  @include mixin.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 20px;
+  }
 }
 
 .page-header__toggle {
@@ -22,13 +31,26 @@
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  cursor: pointer;
+
+  @include mixin.tablet {
+    margin-block-start: -8px;
+  }
 
   &--closed {
     background-image: url("../img/sprite/burger-icon.svg");
   }
+
+  &--opened {
+    background-image: url("../img/sprite/cross.svg");
+  }
 }
 
 .page-header__logo {
+  @include mixin.tablet {
+    padding-inline: 42px;
+    margin-inline-start: 114px;
+  }
 }
 
 .page-header__nav {
@@ -39,9 +61,33 @@
 }
 
 .page-header__telephone-link {
+  display: block;
   text-decoration: none;
   color: inherit;
   font-size: 14px;
   line-height: 14px;
   font-weight: 600;
+
+  @include mixin.tablet {
+    font-size: 16px;
+    line-height: 16px;
+    margin-block-start: -3px;
+  }
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    color: var(--base-gray);
+  }
+
+  &:active {
+    color: var(--dark-blue);
+  }
+
+  &:disabled,
+  &:not([href]) {
+    color: var(--disabled-gray);
+  }
 }

@@ -1,0 +1,139 @@
+@use "../global/mixins" as mixin;
+
+.adv {
+  padding-block: 37px 20px;
+
+  @include mixin.tablet {
+    padding-block: 60px 40px;
+    background-image: image-set(
+      url("../img/bg/clouds-horizontal-tablet@1x.webp") type("image/webp") 1x,
+      url("../img/bg/clouds-horizontal-tablet@2x.webp") type("image/webp") 2x,
+      url("../img/bg/clouds-horizontal-tablet@1x.jpg") type("image/jpg") 1x,
+      url("../img/bg/clouds-horizontal-tablet@2x.jpg") type("image/jpg") 2x
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 768px auto;
+  }
+}
+
+.adv__heading {
+  text-align: center;
+  margin-block-end: 36px;
+
+  &::before {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @include mixin.tablet {
+    margin-block-end: 60px;
+  }
+}
+
+.adv__slider {
+}
+
+.adv .adv__list {
+  display: grid;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include mixin.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+}
+
+.adv .adv__slide {
+  display: grid;
+  row-gap: 20px;
+  justify-items: center;
+  padding-block: 19px;
+  padding-inline: 10px;
+  text-align: center;
+  border: 1px solid  var(--opacity-blue);
+  background-color: var(--base-white);
+
+  @include mixin.tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 324px;
+    height: auto;
+    min-height: 340px;
+    row-gap: 25px;
+    padding-block: 29px;
+    padding-inline: 19px;
+  }
+}
+
+.adv__icon {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--primary-accent);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+
+  &--safe {
+    background-image: url("../img/sprite/shield.svg");
+  }
+
+  &--expertise {
+    background-image: url("../img/sprite/crown.svg");
+  }
+
+  &--equipment {
+    background-image: url("../img/sprite/boots-light.svg");
+  }
+
+  &--individual {
+    background-image: url("../img/sprite/path.svg");
+  }
+
+  &--ecology {
+    background-image: url("../img/sprite/leaf.svg");
+  }
+
+  @include mixin.tablet {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.adv__content {
+}
+
+.adv__subheading {
+  width: 85%;
+  margin-block: 0 15px;
+  margin-inline: auto;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+
+  @include mixin.tablet {
+    width: 95%;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.adv__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+
+  @include mixin.tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

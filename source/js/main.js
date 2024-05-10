@@ -1,5 +1,8 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
-import { heroSwiper, toursSwiper, instructorsSwiper } from './slider.js';
+import { heroSwiper, toursSwiper, instructorsSwiper, reviewsSlider, gallerySlider } from './slider.js';
+import { bindMenuListener } from './nav-menu.js';
+
+const initializeApp = () => {
+  bindMenuListener();
+};
+
+initializeApp();

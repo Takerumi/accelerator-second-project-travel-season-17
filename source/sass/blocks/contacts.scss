@@ -1,0 +1,144 @@
+@use "../global/mixins" as mixin;
+
+.contacts {
+  padding-block: 37px 14px;
+
+  @include mixin.tablet {
+    padding-block: 60px 38px;
+  }
+}
+
+.contacts__container {
+  @include mixin.tablet {
+    padding-inline-end: 43px;
+  }
+}
+
+.contacts__heading {
+  margin-block-end: 28px;
+
+  @include mixin.tablet {
+    margin-block-end: 21px;
+  }
+}
+
+.contacts p {
+  margin: 0;
+  margin-block-end: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+
+  @include mixin.tablet {
+    max-width: 480px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-block-end: 40px;
+  }
+}
+
+.contacts__list {
+  display: grid;
+  row-gap: 30px;
+  list-style: none;
+  margin: 0;
+  margin-block-end: 30px;
+  padding: 0;
+
+  @include mixin.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    margin-block-end: 40px;
+  }
+}
+
+.contacts__element {
+  display: grid;
+  row-gap: 8px;
+  padding-inline-start: 32px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 22px 22px;
+
+  &--phone {
+    background-image: url("../img/sprite/phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/sprite/mail.svg");
+  }
+
+  &--address {
+    background-image: url("../img/sprite/pin-stroke.svg");
+  }
+
+  @include mixin.tablet {
+    row-gap: 6px;
+    padding-inline-start: 34px;
+    background-size: 24px 24px;
+  }
+}
+
+
+.contacts__subheading {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+
+  @include mixin.tablet {
+    font-size: 16px;
+   line-height: 16px;
+  }
+}
+
+.contacts__link {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+
+  @include mixin.tablet {
+    line-height: 22px;
+  }
+
+  &:hover {
+    color: var(--opacity-blue);
+  }
+
+  &:focus {
+    color: var(--primary-accent);
+    outline: none;
+  }
+
+  &:active {
+    color: var(--dark-blue);
+  }
+
+  &:disabled,
+  &:not([href]) {
+    color: var(--disabled-gray);
+  }
+}
+
+.contacts__address {
+  max-width: 80%;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
+
+  @include mixin.tablet {
+    max-width: 100%;
+    line-height: 22px;
+  }
+}
+
+.contacts__map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

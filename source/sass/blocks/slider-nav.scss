@@ -1,0 +1,74 @@
+@use "../global/mixins" as mixin;
+
+.slider-nav {
+  display: flex;
+  column-gap: 4px;
+  position: absolute;
+  z-index: 3;
+}
+
+.slider-nav__btn {
+  display: none;
+  transition: background-color border 0.3s;
+
+  @include mixin.tablet {
+    display: block;
+    width: 37px;
+    height: 35px;
+    background-color: var(--primary-accent);
+    border: 1px solid transparent;
+    position: relative;
+
+    &::after {
+      @include mixin.pseudo(14px, 8px, var(--base-white));
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.5s;
+    }
+
+    &:not(.slider-nav__btn--disabled):hover {
+      border: 1px solid var(--dark-blue);
+      background-color: var(--base-white);
+
+      &::after {
+        background-color: var(--dark-blue);
+      }
+    }
+
+    &:focus {
+      border: 1px solid transparent;
+      background-color: var(--base-white);
+
+      &::after {
+        background-color: var(--dark-blue);
+      }
+    }
+
+    &:not(.slider-nav__btn--disabled):active {
+      border: 1px solid var(--dark-blue);
+      background-color: var(--dark-blue);
+
+      &::after {
+        background-color: var(--base-white);
+      }
+    }
+
+    &--disabled {
+      background-color: var(--disabled-gray);
+      border: 1px solid transparent;
+    }
+  }
+
+  &--prev {
+    &::after {
+      mask: url("../img/sprite/arrow-prev.svg") no-repeat center;
+    }
+  }
+
+  &--next {
+    &::after {
+      mask: url("../img/sprite/arrow-next.svg") no-repeat center;
+    }
+  }
+}
